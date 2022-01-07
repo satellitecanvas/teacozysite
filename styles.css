@@ -20,9 +20,68 @@ html {
     text-align: center;
     }
 
-.logo {
+#logo {
     height: 50px;
     justify-content: flex-start;
+}
+
+header {
+  display: block;
+  margin: auto;
+}
+
+div {
+  font-size: 22px;
+}
+
+#ourmission {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
+  height: 700px;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+#missionfont {
+  background-color: black;
+  display: block;
+  z-index: 2;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+}
+
+#monthlytea {
+  display: flex;
+  width: 1000px;
+}
+
+.months {
+  display: inline-flex;
+  width: 300px;
+  height: 200px;
+}
+
+#berryblitz {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-berryblitz.jpg");
+}
+
+#spicedrum {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-spiced-rum.jpg");
+}
+
+#donut {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-donut.jpg");
+}
+
+#myrtle {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-myrtle-ave.jpg");
+}
+
+#bazaar {
+  background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-bedford-bizarre.jpg");
 }
 
 .container {
