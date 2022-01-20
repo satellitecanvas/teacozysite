@@ -2,13 +2,20 @@ html {
   box-sizing: border-box;
   }
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
-  }
+}
 
 body {
+  display: grid;
+  width: 100%;
   background-image: url('#');
   background-repeat: no-repeat;
   background-position: center;
@@ -22,100 +29,186 @@ body {
   }
 
 header {
-  display: flex;
+  display: grid;
+  align-items: center;
+  grid-auto-flow: column;
   height: 69px;
-  width: 1000px;
+  width: 100%;
   position: fixed;
   z-index: 2;
+  background-color: black;
+  padding-top: 0;
+  margin-top: 0;
+  border-bottom: 1px solid seashell;
+}
+
+#logo {
+  margin-left: 10px;
+  padding: 0;
+  justify-self: start;
+  height: 50px;
 }
 
 nav {
   display: flex;
-  justify-content: flex-end;
-  align-content: space-around;
-  float: right;
-  right: 0;
+  justify-self: end;
+  margin-right: 10px;
 }
 
 .nav {
-  display: inline-flex;
-  justify-content: right;
   margin-right: 10px;
   margin-left: 10px;
+  text-decoration: underline;
 }
 
-#logo {
-  height: 50px;
-  justify-content: flex-start;
+h5 {
+  margin: 0;
 }
 
 main {
   display: grid;
+  margin: 0;
+  padding: 0;
 }
 
 div {
   font-size: 22px;
-  
 }
 
-span {
-  position: absolute;
-}
+/* our mission section */
 
 #ourmission {
+  display: grid;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-mission-background.jpg");
   height: 700px;
-  margin: 100px;
-  display: flex;
+  width: 100%;
+  margin-top: 69px;
+  padding: 0;
   position: relative;
+  justify-self: center;
 }
 
 #missionfont {
-  display: flex;
-  justify-content: space-between;
-  align-content: space-between;
+  display: grid;
+  width: 100%;
+  height: 15%;
+  grid-gap: 15%;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  align-content: center;
   background-color: black;
   z-index: 1;
-  margin-top: 50%;
-  margin: auto;
+}
+
+/*tea of the month section */
+
+#month {
+  display: grid;
+  justify-items: center;
+  margin: 5%;
+}
+
+#teaofthemonth {
   position: absolute;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  align-items: space-between;
+  height: 500px;
+  padding-top: 50px;
 }
 
-#monthlytea {
-  display: flex;
+#monthlyteas {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  display: grid;
+  grid-template-rows: 2;
+  grid-template-columns: 6;
   width: 1000px;
+  justify-self: center;
 }
 
-.months {
-  display: inline-flex;
+.monthlytea {
+  display: block;
+  justify-content: center;
   width: 300px;
-  height: 200px;
+  height: 250px;
+  padding: 0;
+  margin: 20px auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 200px;
+}
+
+.monthlyteas h4 {
+  margin-top: 10px;
+}
+
+#monthberry {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 
 #berryblitz {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-berryblitz.jpg");
 }
 
+#monthspiced {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 3;
+  grid-column-end: 5;
+}
+
 #spicedrum {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-spiced-rum.jpg");
+}
+
+#monthdonut {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 5;
+  grid-column-end: 7;
 }
 
 #donut {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-donut.jpg");
 }
 
+#monthmyrtle {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 4;
+}
+
 #myrtle {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-myrtle-ave.jpg");
+}
+
+#monthbazaar {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 4;
+  grid-column-end: 6;
 }
 
 #bazaar {
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-bedford-bizarre.jpg");
 }
 
+/* location section */
+
 #locations {
+  width: 100%;
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   height: 500px;
 }
 
@@ -143,13 +236,13 @@ footer {
 }
 
 .container {
-    width: 50%;
-    height: 200px;
-    overflow: hidden;
-    }
+  width: 50%;
+  height: 200px;
+  overflow: hidden;
+}
      
 .container img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    }
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
