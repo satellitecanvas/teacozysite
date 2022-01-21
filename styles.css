@@ -107,42 +107,56 @@ div {
 
 #month {
   display: grid;
+  grid-template-rows: auto;
+  justify-self: center;
   justify-items: center;
-  margin: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 1000px;
+  height: auto;
 }
 
 #teaofthemonth {
-  position: absolute;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  align-items: space-between;
-  height: 500px;
-  padding-top: 50px;
+  justify-self: center;
+  width: 100%;
+  margin-bottom: 5%;
 }
 
 #monthlyteas {
-  grid-row-start: 2;
-  grid-row-end: 3;
   display: grid;
+  grid-gap: 5% 0%;
+  justify-self: center;
   grid-template-rows: 2;
   grid-template-columns: 6;
-  width: 1000px;
+  width: 100%;
   justify-self: center;
 }
 
+/*template for monthly teas */
+
 .monthlytea {
-  display: block;
-  justify-content: center;
+  display: grid;
+  grid-auto-rows: auto;
+  justify-items: center;
   width: 300px;
-  height: 250px;
   padding: 0;
-  margin: 20px auto;
+  margin: 0;
+}
+
+.teapicture {
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 200px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  height: 200px;
+  width: 300px;
 }
 
-.monthlyteas h4 {
+.monthlytea h4 {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -203,13 +217,44 @@ div {
 
 /* location section */
 
-#locations {
-  width: 100%;
+#locationsection {
+  height: 500px;
+  width: auto;
   background-image: url("https://content.codecademy.com/courses/freelance-1/unit-4/img-locations-background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 500px;
+  padding: 25px 50px;
+  margin: 0 50px;
+  display: grid;
+}
+
+#locationsection h2 {
+  margin-top: 30px;
+  justify-self: center;
+  align-self: center;
+  margin-bottom: 15px;
+}
+
+#locations {
+  margin-top: 0px;
+  display: grid;
+  grid-gap: 0% 40px;
+  grid-auto-flow: column;
+  justify-content: center;
+  align-items: start;
+}
+
+.location {
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  align-self: center;
+  align-content: space-around;
+}
+
+.location p {
+  margin: 10px;
 }
 
 #downtown {
